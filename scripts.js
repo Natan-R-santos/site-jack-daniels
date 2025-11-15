@@ -1,14 +1,30 @@
 alert("deu bom");
 console.log("feito por Natan rcs");
-const menuMiboles = document.getElementById("menuMobiles");
-const menuBtn =document.getElementById("menuBtn");
-menuBtn.addEventlistener("click", () =>{
-  menuMobiles.classlist.toggle("active");});
-const images = document.querySELECTORALL(".conteiner div");
-const mover = 0;
-function moverDiv(){
-  images.forEach(img=>img.classlist.remove("active"));
-  images[index].classlist.add("active");
+
+// Menu celular
+const menuMobiles = document.getElementById("menuMobiles");
+const menuBtn = document.getElementById("menuBtn");
+
+menuBtn.addEventListener("click", () => {
+  menuMobiles.classList.toggle("active");
+});
+
+// mudar divs
+const images = document.querySelectorAll(".conteiner div");
+let index = 0;
+
+function mudarDiv() {
+  images.forEach(img => img.classList.remove("active"));
+  images[index].classList.add("active");
+
   index++;
-  if (index => images.length){index=0;}} setInterval(mudarDiv,3500);
+
+  if (index >= images.length) {
+    index = 0;
+  }
+}
+
+setInterval(mudarDiv, 3500);
+
+
 
