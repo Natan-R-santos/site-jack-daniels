@@ -4,6 +4,11 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+.conteiner .active{
+    border: 2px solid #b8860b;
+    transform: scale(1.05);
+    transition: .4s;
+}
 
 body{
     background: #0c0c0c;
@@ -128,3 +133,4 @@ footer:hover{
         gap: 15px;
     }
 }
+
